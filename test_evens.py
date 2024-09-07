@@ -9,6 +9,14 @@ class TestEvens(unittest.TestCase):
     
     def test_return_False_if_list_is_empty(self):
         self.assertEqual(even_number_of_evens([]), False)
+        
+    
+    def test_return_False_if_number_of_evens_is_odd(self):
+        self.assertEqual(even_number_of_evens([2, 3, 1, 5, 4, 6]), False)
+    
+
+    def test_return_True_if_number_of_evens_is_even(self):
+        self.assertEqual(even_number_of_evens([2, 3, 2]), True)
 
 
 if __name__ ==  "__main__":
