@@ -11,11 +11,8 @@ def even_number_of_evens(numbers: list):
     else:
         if len(numbers) == 0:
             return False
-        count_evens = 0
-        for num in numbers:
-            if num % 2 == 0:
-                count_evens += 1
-        return True if count_evens % 2 == 0 else False
+        count_evens = [num for num in numbers if num % 2 == 0]
+        return True if len(count_evens) % 2 == 0 else False
         
 
 
@@ -24,4 +21,4 @@ def even_number_of_evens(numbers: list):
 
 
 if __name__ == "__main__":
-    print(even_number_of_evens(5))
+    print(even_number_of_evens([2, 2, 3]))
